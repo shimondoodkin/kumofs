@@ -245,7 +245,7 @@ inline bool Storage::cache_is_valid(
 		const char* raw_key, uint32_t raw_keylen,
 		ClockTime cache_clocktime)
 {
-	char meta_buf[KEY_META_SIZE];
+	char meta_buf[VALUE_CLOCKTIME_SIZE];
 
 	if( m_op.get_header(m_data, raw_key, raw_keylen,
 				meta_buf, sizeof(meta_buf)) <
